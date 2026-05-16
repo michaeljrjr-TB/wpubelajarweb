@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan CSS Float</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #b28e2d;
+        padding: 40px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      section {
+        background: white;
+        padding: 30px;
+        margin-bottom: 50px;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #1e40af;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 10px;
+      }
+
+      .text-wrapping img {
+        margin-right: 20px;
+        margin-bottom: 10px;
+        border: 4px solid #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .img-left {
+        float: left;
+      }
+      .img-rigth {
+        float: right;
+      }
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .kolom-container {
+        background-color: #f8fafc;
+        padding: 10px;
+        border-radius: 8px;
+        overflow: auto;
+      }
+
+      .kolom {
+        width: 31.33%;
+        float: left;
+        margin: 1%;
+        padding: 20px;
+        background-color: #dbeafe;
+        border: 1px solid #bfdbfe;
+        min-height: 200px;
+        text-align: center;
+      }
+
+      .gallery-container {
+        padding: 10px;
+        background-color: #f8fafc;
+      }
+
+      .gallery-item {
+        float: left;
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        background-color: #eee;
+        border: 2px solid #ddd;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .footer-note {
+        background-color: #1e293b;
+        color: #f1f5f9;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Eksperimen CSS Float</h1>
+
+    <section class="text-wrapping clearfix">
+      <h2>1. Text Wrapping</h2>
+      <img
+        src="https://picsum.photos/id/10/200/200"
+        alt="Gambar 1"
+        class="img-left"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+        dignissimos eaque ex explicabo modi dolore maxime ab praesentium quia
+        quaerat magni rem incidunt dolorum delectus officiis debitis quam odit
+        provident, ut ea quos alias nihil voluptatum! Laudantium ratione
+        delectus impedit porro explicabo, temporibus hic fugit harum blanditiis
+        minus? Atque, ratione eius perferendis harum dolor error reprehenderit
+        ipsum reiciendis illo commodi similique tenetur enim quaerat aliquid
+        assumenda laudantium, modi consequuntur odit iste quod corporis
+        obcaecati. Vel porro animi odit atque. Amet eum incidunt provident
+        itaque perspiciatis ipsa non ad voluptates id inventore! Quas rem quod
+        ipsum incidunt molestias optio quia nostrum atque voluptatem aliquam, a
+        possimus repudiandae quis debitis ex error dolorem corporis qui dolores!
+        Qui officia maiores nihil illum eveniet, rerum dolores exercitationem
+        fugit quaerat voluptatem laudantium temporibus voluptates asperiores
+        fugiat quidem repudiandae quas, doloribus odio similique deserunt ad
+        odit dolorem! Vitae sint eaque quia, officia commodi doloribus alias sed
+        dolorem ut maxime architecto, adipisci, amet incidunt qui autem. Sequi,
+        eius repellendus. Optio consequuntur reiciendis ducimus? Maiores quo
+        cumque architecto nesciunt doloremque iure facilis quaerat, cupiditate
+        consequuntur aliquam reprehenderit doloribus, consectetur corrupti saepe
+        in ratione veritatis nemo unde inventore neque voluptate quasi expedita?
+        Maiores nemo dolorem illum aliquid, quis molestiae impedit blanditiis
+        nesciunt soluta excepturi? Distinctio, asperiores, quos dolores laborum
+        neque maiores exercitationem iure dolorem esse, dolore vel sequi!
+        Aliquid odio consectetur commodi molestias sint, fugit officia
+        doloremque pariatur cupiditate a accusantium ipsa explicabo voluptates
+        error harum qui inventore vero laborum voluptatem maiores excepturi.
+        Adipisci, eveniet autem. Dolores, sit nisi!
+      </p>
+
+      <img
+        src="https://picsum.photos/id/20/200/200"
+        alt="Gambar 2"
+        class="img-rigth"
+      />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+        voluptatum optio! Iure nam aspernatur ipsam maxime architecto,
+        exercitationem dolores voluptates quia delectus! Animi, illum iusto
+        rerum est consectetur quis vel amet? Nesciunt, harum alias eum fugit
+        nemo fuga sit suscipit unde perferendis necessitatibus earum, possimus
+        similique ipsa voluptatem, hic eaque!
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Layout 3 Kolom</h2>
+      <div class="kolom-container">
+        <div class="kolom">
+          <h3>Kolom 1</h3>
+          <p>ini kolom sebelah kiri</p>
+        </div>
+        <div class="kolom">
+          <h3>Kolom 2</h3>
+          <p>ini kolom tengah</p>
+        </div>
+        <div class="kolom">
+          <h3>Kolom 3</h3>
+          <p>ini kolom sebelah kanan</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Image Gallery</h2>
+      <div class="gallery-container clearfix">
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/30/150/150" alt="Gallery 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/40/150/150" alt="Gallery 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/50/150/150" alt="Gallery 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/60/150/150" alt="Gallery 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/70/150/150" alt="Gallery 5" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
